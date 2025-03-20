@@ -1,0 +1,229 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Análisis de Indicadores Económicos &mdash; Análisis de Indicadores Económicos 1.0</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=4936afed"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/translations.js?v=f85f4cfb"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="Introducción" href="introduccion.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            Análisis de Indicadores Económicos
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contenido:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="introduccion.html">Introducción</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduccion.html#contexto-del-proyecto">Contexto del Proyecto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduccion.html#objetivos">Objetivos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduccion.html#alcance">Alcance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduccion.html#importancia">Importancia</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="etl_proceso.html">Proceso ETL/ELT</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="etl_proceso.html#fuentes-de-datos">Fuentes de Datos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="etl_proceso.html#extraccion-extract">Extracción (Extract)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="etl_proceso.html#transformacion-transform">Transformación (Transform)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="etl_proceso.html#carga-load">Carga (Load)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="etl_proceso.html#limpieza-avanzada-de-datos">Limpieza Avanzada de Datos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="etl_proceso.html#diagrama-del-proceso">Diagrama del Proceso</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="desarrollo.html">Proceso de Desarrollo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="desarrollo.html#version-1-extraccion-basica-de-datos">Versión 1: Extracción Básica de Datos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="desarrollo.html#version-2-analisis-preliminar">Versión 2: Análisis Preliminar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="desarrollo.html#version-3-etl-mejorado-y-limpieza-avanzada">Versión 3: ETL Mejorado y Limpieza Avanzada</a></li>
+<li class="toctree-l2"><a class="reference internal" href="desarrollo.html#version-4-analisis-avanzado">Versión 4: Análisis Avanzado</a></li>
+<li class="toctree-l2"><a class="reference internal" href="desarrollo.html#version-5-visualizacion-interactiva">Versión 5: Visualización Interactiva</a></li>
+<li class="toctree-l2"><a class="reference internal" href="desarrollo.html#organizacion-final-del-proyecto">Organización Final del Proyecto</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="errores_soluciones.html">Errores y Soluciones</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="errores_soluciones.html#problemas-en-la-extraccion-de-datos">Problemas en la Extracción de Datos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="errores_soluciones.html#acceso-a-apis-oficiales">Acceso a APIs Oficiales</a></li>
+<li class="toctree-l3"><a class="reference internal" href="errores_soluciones.html#datos-inconsistentes">Datos Inconsistentes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="errores_soluciones.html#desafios-en-el-procesamiento-de-datos">Desafíos en el Procesamiento de Datos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="errores_soluciones.html#valores-atipicos-outliers">Valores Atípicos (Outliers)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="errores_soluciones.html#alineacion-temporal">Alineación Temporal</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="errores_soluciones.html#problemas-en-el-analisis-estadistico">Problemas en el Análisis Estadístico</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="errores_soluciones.html#correlaciones-espurias">Correlaciones Espurias</a></li>
+<li class="toctree-l3"><a class="reference internal" href="errores_soluciones.html#ajuste-de-modelos">Ajuste de Modelos</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="errores_soluciones.html#desafios-en-la-visualizacion">Desafíos en la Visualización</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="errores_soluciones.html#rendimiento-de-streamlit">Rendimiento de Streamlit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="errores_soluciones.html#errores-de-conversion-de-datos">Errores de Conversión de Datos</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="errores_soluciones.html#lecciones-aprendidas">Lecciones Aprendidas</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Análisis de Indicadores Económicos</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Análisis de Indicadores Económicos</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="analisis-de-indicadores-economicos">
+<h1>Análisis de Indicadores Económicos<a class="headerlink" href="#analisis-de-indicadores-economicos" title="Link to this heading"></a></h1>
+<a class="reference internal image-reference" href="_images/mexico_flag.png"><img alt="Bandera de México" class="align-right" src="_images/mexico_flag.png" style="width: 100px;" />
+</a>
+<p>Bienvenido a la documentación del proyecto de Análisis de Indicadores Económicos de México.
+Este sistema integra procesos ETL/ELT, análisis de datos y visualizaciones a través de
+aplicaciones Streamlit para proporcionar insights sobre los principales indicadores económicos
+del país.</p>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Contenido:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="introduccion.html">Introducción</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduccion.html#contexto-del-proyecto">Contexto del Proyecto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduccion.html#objetivos">Objetivos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduccion.html#alcance">Alcance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduccion.html#importancia">Importancia</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="etl_proceso.html">Proceso ETL/ELT</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="etl_proceso.html#fuentes-de-datos">Fuentes de Datos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="etl_proceso.html#extraccion-extract">Extracción (Extract)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="etl_proceso.html#transformacion-transform">Transformación (Transform)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="etl_proceso.html#carga-load">Carga (Load)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="etl_proceso.html#limpieza-avanzada-de-datos">Limpieza Avanzada de Datos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="etl_proceso.html#diagrama-del-proceso">Diagrama del Proceso</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="desarrollo.html">Proceso de Desarrollo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="desarrollo.html#version-1-extraccion-basica-de-datos">Versión 1: Extracción Básica de Datos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="desarrollo.html#version-2-analisis-preliminar">Versión 2: Análisis Preliminar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="desarrollo.html#version-3-etl-mejorado-y-limpieza-avanzada">Versión 3: ETL Mejorado y Limpieza Avanzada</a></li>
+<li class="toctree-l2"><a class="reference internal" href="desarrollo.html#version-4-analisis-avanzado">Versión 4: Análisis Avanzado</a></li>
+<li class="toctree-l2"><a class="reference internal" href="desarrollo.html#version-5-visualizacion-interactiva">Versión 5: Visualización Interactiva</a></li>
+<li class="toctree-l2"><a class="reference internal" href="desarrollo.html#organizacion-final-del-proyecto">Organización Final del Proyecto</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="errores_soluciones.html">Errores y Soluciones</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="errores_soluciones.html#problemas-en-la-extraccion-de-datos">Problemas en la Extracción de Datos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="errores_soluciones.html#desafios-en-el-procesamiento-de-datos">Desafíos en el Procesamiento de Datos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="errores_soluciones.html#problemas-en-el-analisis-estadistico">Problemas en el Análisis Estadístico</a></li>
+<li class="toctree-l2"><a class="reference internal" href="errores_soluciones.html#desafios-en-la-visualizacion">Desafíos en la Visualización</a></li>
+<li class="toctree-l2"><a class="reference internal" href="errores_soluciones.html#lecciones-aprendidas">Lecciones Aprendidas</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="caracteristicas-principales">
+<h2>Características Principales<a class="headerlink" href="#caracteristicas-principales" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Extracción de datos económicos directamente de fuentes oficiales (Banxico e INEGI)</p></li>
+<li><p>Transformación y limpieza de datos para análisis estadístico</p></li>
+<li><p>Modelos de regresión para estudiar las relaciones entre indicadores</p></li>
+<li><p>Visualización interactiva de resultados con Streamlit</p></li>
+<li><p>Predicción temporal mediante modelos ARIMA</p></li>
+</ul>
+</section>
+<section id="estructura-del-proyecto">
+<h2>Estructura del Proyecto<a class="headerlink" href="#estructura-del-proyecto" title="Link to this heading"></a></h2>
+<p>El proyecto está organizado en cuatro versiones principales que representan el progreso
+del desarrollo:</p>
+<ol class="arabic simple">
+<li><p><strong>v1_extraccion</strong>: Procesos ETL/ELT para obtener datos económicos</p></li>
+<li><p><strong>v2_analisis</strong>: Scripts de análisis estadístico y generación de modelos</p></li>
+<li><p><strong>v3_streamlit</strong>: Aplicaciones de visualización en diferentes etapas</p></li>
+<li><p><strong>v4_final</strong>: Versión final optimizada y profesional</p></li>
+</ol>
+</section>
+</section>
+<section id="indices-y-tablas">
+<h1>Indices y Tablas<a class="headerlink" href="#indices-y-tablas" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Índice</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Índice de Módulos</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Página de Búsqueda</span></a></p></li>
+</ul>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="introduccion.html" class="btn btn-neutral float-right" title="Introducción" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2025, David Escudero - Instituto Tecnológico Autónomo de México (ITAM).</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

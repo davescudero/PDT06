@@ -1,0 +1,292 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proceso ETL/ELT &mdash; Análisis de Indicadores Económicos 1.0</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=4936afed"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/translations.js?v=f85f4cfb"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="Proceso de Desarrollo" href="desarrollo.html" />
+    <link rel="prev" title="Introducción" href="introduccion.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Análisis de Indicadores Económicos
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contenido:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduccion.html">Introducción</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduccion.html#contexto-del-proyecto">Contexto del Proyecto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduccion.html#objetivos">Objetivos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduccion.html#alcance">Alcance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduccion.html#importancia">Importancia</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Proceso ETL/ELT</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#fuentes-de-datos">Fuentes de Datos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#extraccion-extract">Extracción (Extract)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#transformacion-transform">Transformación (Transform)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#carga-load">Carga (Load)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#limpieza-avanzada-de-datos">Limpieza Avanzada de Datos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#diagrama-del-proceso">Diagrama del Proceso</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="desarrollo.html">Proceso de Desarrollo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="desarrollo.html#version-1-extraccion-basica-de-datos">Versión 1: Extracción Básica de Datos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="desarrollo.html#version-2-analisis-preliminar">Versión 2: Análisis Preliminar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="desarrollo.html#version-3-etl-mejorado-y-limpieza-avanzada">Versión 3: ETL Mejorado y Limpieza Avanzada</a></li>
+<li class="toctree-l2"><a class="reference internal" href="desarrollo.html#version-4-analisis-avanzado">Versión 4: Análisis Avanzado</a></li>
+<li class="toctree-l2"><a class="reference internal" href="desarrollo.html#version-5-visualizacion-interactiva">Versión 5: Visualización Interactiva</a></li>
+<li class="toctree-l2"><a class="reference internal" href="desarrollo.html#organizacion-final-del-proyecto">Organización Final del Proyecto</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="errores_soluciones.html">Errores y Soluciones</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="errores_soluciones.html#problemas-en-la-extraccion-de-datos">Problemas en la Extracción de Datos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="errores_soluciones.html#acceso-a-apis-oficiales">Acceso a APIs Oficiales</a></li>
+<li class="toctree-l3"><a class="reference internal" href="errores_soluciones.html#datos-inconsistentes">Datos Inconsistentes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="errores_soluciones.html#desafios-en-el-procesamiento-de-datos">Desafíos en el Procesamiento de Datos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="errores_soluciones.html#valores-atipicos-outliers">Valores Atípicos (Outliers)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="errores_soluciones.html#alineacion-temporal">Alineación Temporal</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="errores_soluciones.html#problemas-en-el-analisis-estadistico">Problemas en el Análisis Estadístico</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="errores_soluciones.html#correlaciones-espurias">Correlaciones Espurias</a></li>
+<li class="toctree-l3"><a class="reference internal" href="errores_soluciones.html#ajuste-de-modelos">Ajuste de Modelos</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="errores_soluciones.html#desafios-en-la-visualizacion">Desafíos en la Visualización</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="errores_soluciones.html#rendimiento-de-streamlit">Rendimiento de Streamlit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="errores_soluciones.html#errores-de-conversion-de-datos">Errores de Conversión de Datos</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="errores_soluciones.html#lecciones-aprendidas">Lecciones Aprendidas</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Análisis de Indicadores Económicos</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Proceso ETL/ELT</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/etl_proceso.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="proceso-etl-elt">
+<h1>Proceso ETL/ELT<a class="headerlink" href="#proceso-etl-elt" title="Link to this heading"></a></h1>
+<p>Este proyecto implementa una arquitectura ETL (Extract, Transform, Load) robusta para la obtención y
+procesamiento de datos económicos de México. Esta sección describe en detalle las etapas de este proceso.</p>
+<section id="fuentes-de-datos">
+<h2>Fuentes de Datos<a class="headerlink" href="#fuentes-de-datos" title="Link to this heading"></a></h2>
+<p>El sistema está diseñado para extraer datos de dos fuentes oficiales:</p>
+<ol class="arabic simple">
+<li><p><strong>Banco de México (Banxico)</strong>: API oficial para series de tiempo económicas
+- Tipo de cambio FIX (Peso mexicano frente al dólar estadounidense)
+- Tasa de interés interbancaria de equilibrio (TIIE) a 28 días</p></li>
+<li><p><strong>Instituto Nacional de Estadística y Geografía (INEGI)</strong>: API oficial para indicadores económicos
+- Índice Nacional de Precios al Consumidor (INPC) para cálculo de inflación</p></li>
+</ol>
+<p>Ambas APIs requieren autenticación mediante tokens que se gestionan de forma segura a través de un
+archivo de configuración.</p>
+</section>
+<section id="extraccion-extract">
+<h2>Extracción (Extract)<a class="headerlink" href="#extraccion-extract" title="Link to this heading"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">extraer_tipo_cambio_banxico</span><span class="p">(</span><span class="n">token</span><span class="p">,</span> <span class="n">fecha_inicio</span><span class="p">,</span> <span class="n">fecha_fin</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Extrae datos del tipo de cambio de Banxico.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        token: Token de autenticación para la API</span>
+<span class="sd">        fecha_inicio: Fecha de inicio para la consulta</span>
+<span class="sd">        fecha_fin: Fecha fin para la consulta</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        DataFrame con los datos del tipo de cambio</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://www.banxico.org.mx/SieAPIRest/service/v1/series/SF43718/datos/</span><span class="si">{</span><span class="n">fecha_inicio</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">fecha_fin</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Bmx-Token&quot;</span><span class="p">:</span> <span class="n">token</span><span class="p">}</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+    <span class="c1"># Procesamiento de la respuesta...</span>
+</pre></div>
+</div>
+<p>El sistema implementa un mecanismo de redundancia para garantizar la disponibilidad de datos:</p>
+<ol class="arabic simple">
+<li><p>Intenta primero obtener datos de Banxico</p></li>
+<li><p>Si falla, recurre a INEGI</p></li>
+<li><p>Como último recurso, genera datos sintéticos realistas</p></li>
+</ol>
+</section>
+<section id="transformacion-transform">
+<h2>Transformación (Transform)<a class="headerlink" href="#transformacion-transform" title="Link to this heading"></a></h2>
+<p>Una vez obtenidos los datos crudos, se aplican diversas transformaciones:</p>
+<ol class="arabic simple">
+<li><p><strong>Normalización de formatos</strong>:
+- Conversión uniforme de fechas
+- Estandarización de nombres de columnas
+- Transformación de tipos de datos</p></li>
+<li><p><strong>Limpieza inicial</strong>:
+- Eliminación de filas con valores nulos
+- Detección de duplicados
+- Ordenamiento cronológico</p></li>
+<li><p><strong>Procesamiento avanzado</strong>:
+- Cálculo de la inflación a partir del INPC
+- Agregación mensual de datos diarios
+- Alineación temporal entre las diferentes series</p></li>
+</ol>
+</section>
+<section id="carga-load">
+<h2>Carga (Load)<a class="headerlink" href="#carga-load" title="Link to this heading"></a></h2>
+<p>Los datos procesados se cargan en diferentes destinos:</p>
+<ol class="arabic simple">
+<li><p><strong>Almacenamiento local</strong>:
+- Archivos CSV estructurados
+- Copias de respaldo con timestamps</p></li>
+<li><p><strong>Almacenamiento en la nube</strong>:
+- Amazon S3 para persistencia a largo plazo
+- Estructurado en buckets por tipo de dato y fecha</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">cargar_en_s3</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">nombre_archivo</span><span class="p">,</span> <span class="n">bucket</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Carga el DataFrame en un bucket de S3.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        df: DataFrame a cargar</span>
+<span class="sd">        nombre_archivo: Nombre del archivo en S3</span>
+<span class="sd">        bucket: Nombre del bucket</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">csv_buffer</span> <span class="o">=</span> <span class="n">StringIO</span><span class="p">()</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">csv_buffer</span><span class="p">)</span>
+    <span class="n">s3_resource</span> <span class="o">=</span> <span class="n">boto3</span><span class="o">.</span><span class="n">resource</span><span class="p">(</span><span class="s1">&#39;s3&#39;</span><span class="p">)</span>
+    <span class="n">s3_resource</span><span class="o">.</span><span class="n">Object</span><span class="p">(</span><span class="n">bucket</span><span class="p">,</span> <span class="n">nombre_archivo</span><span class="p">)</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">Body</span><span class="o">=</span><span class="n">csv_buffer</span><span class="o">.</span><span class="n">getvalue</span><span class="p">())</span>
+</pre></div>
+</div>
+</section>
+<section id="limpieza-avanzada-de-datos">
+<h2>Limpieza Avanzada de Datos<a class="headerlink" href="#limpieza-avanzada-de-datos" title="Link to this heading"></a></h2>
+<p>Posterior al proceso ETL básico, se realiza una limpieza más avanzada:</p>
+<ol class="arabic simple">
+<li><p><strong>Detección y tratamiento de outliers</strong>:
+- Método de rango intercuartílico (IQR)
+- Evaluación de Z-scores</p></li>
+<li><p><strong>Corrección de inconsistencias</strong>:
+- Identificación de secuencias de valores idénticos poco realistas
+- Generación de variaciones realistas basadas en patrones estadísticos</p></li>
+<li><p><strong>Validación final</strong>:
+- Verificación de integridad referencial
+- Comprobación de rangos válidos para cada indicador
+- Análisis de consistencia temporal</p></li>
+</ol>
+<p>Esta limpieza avanzada genera el conjunto de datos definitivo (<cite>indicadores_economicos_clean_v2.csv</cite>)
+que se utiliza para todos los análisis posteriores.</p>
+</section>
+<section id="diagrama-del-proceso">
+<h2>Diagrama del Proceso<a class="headerlink" href="#diagrama-del-proceso" title="Link to this heading"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+----------------+</span>     <span class="o">+------------------+</span>     <span class="o">+----------------+</span>
+<span class="o">|</span>                <span class="o">|</span>     <span class="o">|</span>                  <span class="o">|</span>     <span class="o">|</span>                <span class="o">|</span>
+<span class="o">|</span>  <span class="n">Extracción</span>    <span class="o">|----&gt;|</span>  <span class="n">Transformación</span>  <span class="o">|----&gt;|</span>    <span class="n">Carga</span>      <span class="o">|</span>
+<span class="o">|</span>  <span class="p">(</span><span class="n">Banxico</span><span class="p">,</span>     <span class="o">|</span>     <span class="o">|</span>  <span class="p">(</span><span class="n">Limpieza</span><span class="p">,</span>      <span class="o">|</span>     <span class="o">|</span>  <span class="p">(</span><span class="n">Local</span><span class="p">,</span> <span class="n">S3</span><span class="p">)</span>  <span class="o">|</span>
+<span class="o">|</span>   <span class="n">INEGI</span><span class="p">)</span>       <span class="o">|</span>     <span class="o">|</span>   <span class="n">Normalización</span><span class="p">)</span> <span class="o">|</span>     <span class="o">|</span>                <span class="o">|</span>
+<span class="o">+----------------+</span>     <span class="o">+------------------+</span>     <span class="o">+----------------+</span>
+                                                       <span class="o">|</span>
+                                                       <span class="n">v</span>
+                                           <span class="o">+------------------------+</span>
+                                           <span class="o">|</span>                        <span class="o">|</span>
+                                           <span class="o">|</span>  <span class="n">Limpieza</span> <span class="n">avanzada</span>     <span class="o">|</span>
+                                           <span class="o">|</span>  <span class="p">(</span><span class="n">Outliers</span><span class="p">,</span> <span class="n">Validación</span><span class="p">)</span><span class="o">|</span>
+                                           <span class="o">|</span>                        <span class="o">|</span>
+                                           <span class="o">+------------------------+</span>
+                                                       <span class="o">|</span>
+                                                       <span class="n">v</span>
+                                           <span class="o">+------------------------+</span>
+                                           <span class="o">|</span>                        <span class="o">|</span>
+                                           <span class="o">|</span>  <span class="n">Conjunto</span> <span class="n">final</span>        <span class="o">|</span>
+                                           <span class="o">|</span>  <span class="n">para</span> <span class="n">análisis</span>         <span class="o">|</span>
+                                           <span class="o">|</span>                        <span class="o">|</span>
+                                           <span class="o">+------------------------+</span>
+</pre></div>
+</div>
+<p>La arquitectura modular del sistema permite su fácil mantenimiento y extensión para incorporar
+nuevas fuentes de datos o indicadores económicos adicionales en el futuro.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="introduccion.html" class="btn btn-neutral float-left" title="Introducción" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="desarrollo.html" class="btn btn-neutral float-right" title="Proceso de Desarrollo" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2025, David Escudero - Instituto Tecnológico Autónomo de México (ITAM).</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

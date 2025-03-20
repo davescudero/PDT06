@@ -1,0 +1,78 @@
+ # Archivos de credenciales
+*config.ini
+*.env
+*credentials.json
+*credentials.yaml
+*credentials.yml
+*apikey*
+*api_key*
+*secret*
+*token*
+*password*
+
+# Bases de datos y archivos grandes
+*.db
+*.sqlite
+*.sqlite3
+*.csv
+*.xls
+*.xlsx
+*.parquet
+*.feather
+*.hdf
+*.h5
+*.pickle
+*.pkl
+*.zip
+*.tar.gz
+*.rar
+
+# Directorios específicos
+data/
+raw_data/
+temp/
+temp_data/
+temp_backup/
+__pycache__/
+.ipynb_checkpoints/
+.idea/
+.vscode/
+
+# Archivos de caché
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Archivos de entorno
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+.directory
+
+# Archivos de Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Excepciones: Incluir archivos específicos necesarios para ejecutar el proyecto
+# (a pesar de estar en carpetas excluidas)
+!v*/data/README.md
+!v*/img/README.md
+!docs/source/_static/*.png
+!docs/build/
+!docs/build/_static/
+!docs/build/_images/
+!README.md
+
+# Archivos específicos del proyecto que deben ser excluidos
+tarea06/config/credentials.py
+.streamlit/secrets.toml

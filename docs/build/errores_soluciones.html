@@ -1,0 +1,266 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Errores y Soluciones &mdash; Análisis de Indicadores Económicos 1.0</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=4936afed"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/translations.js?v=f85f4cfb"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="prev" title="Proceso de Desarrollo" href="desarrollo.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Análisis de Indicadores Económicos
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contenido:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduccion.html">Introducción</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduccion.html#contexto-del-proyecto">Contexto del Proyecto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduccion.html#objetivos">Objetivos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduccion.html#alcance">Alcance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduccion.html#importancia">Importancia</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="etl_proceso.html">Proceso ETL/ELT</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="etl_proceso.html#fuentes-de-datos">Fuentes de Datos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="etl_proceso.html#extraccion-extract">Extracción (Extract)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="etl_proceso.html#transformacion-transform">Transformación (Transform)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="etl_proceso.html#carga-load">Carga (Load)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="etl_proceso.html#limpieza-avanzada-de-datos">Limpieza Avanzada de Datos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="etl_proceso.html#diagrama-del-proceso">Diagrama del Proceso</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="desarrollo.html">Proceso de Desarrollo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="desarrollo.html#version-1-extraccion-basica-de-datos">Versión 1: Extracción Básica de Datos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="desarrollo.html#version-2-analisis-preliminar">Versión 2: Análisis Preliminar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="desarrollo.html#version-3-etl-mejorado-y-limpieza-avanzada">Versión 3: ETL Mejorado y Limpieza Avanzada</a></li>
+<li class="toctree-l2"><a class="reference internal" href="desarrollo.html#version-4-analisis-avanzado">Versión 4: Análisis Avanzado</a></li>
+<li class="toctree-l2"><a class="reference internal" href="desarrollo.html#version-5-visualizacion-interactiva">Versión 5: Visualización Interactiva</a></li>
+<li class="toctree-l2"><a class="reference internal" href="desarrollo.html#organizacion-final-del-proyecto">Organización Final del Proyecto</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Errores y Soluciones</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#problemas-en-la-extraccion-de-datos">Problemas en la Extracción de Datos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#acceso-a-apis-oficiales">Acceso a APIs Oficiales</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#datos-inconsistentes">Datos Inconsistentes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#desafios-en-el-procesamiento-de-datos">Desafíos en el Procesamiento de Datos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#valores-atipicos-outliers">Valores Atípicos (Outliers)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#alineacion-temporal">Alineación Temporal</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#problemas-en-el-analisis-estadistico">Problemas en el Análisis Estadístico</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#correlaciones-espurias">Correlaciones Espurias</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ajuste-de-modelos">Ajuste de Modelos</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#desafios-en-la-visualizacion">Desafíos en la Visualización</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#rendimiento-de-streamlit">Rendimiento de Streamlit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#errores-de-conversion-de-datos">Errores de Conversión de Datos</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#lecciones-aprendidas">Lecciones Aprendidas</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Análisis de Indicadores Económicos</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Errores y Soluciones</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/errores_soluciones.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="errores-y-soluciones">
+<h1>Errores y Soluciones<a class="headerlink" href="#errores-y-soluciones" title="Link to this heading"></a></h1>
+<p>Durante el desarrollo del proyecto nos enfrentamos a diversos desafíos técnicos y problemas
+que requirieron soluciones creativas. Esta sección documenta los principales problemas
+encontrados y las estrategias implementadas para resolverlos.</p>
+<section id="problemas-en-la-extraccion-de-datos">
+<h2>Problemas en la Extracción de Datos<a class="headerlink" href="#problemas-en-la-extraccion-de-datos" title="Link to this heading"></a></h2>
+<section id="acceso-a-apis-oficiales">
+<h3>Acceso a APIs Oficiales<a class="headerlink" href="#acceso-a-apis-oficiales" title="Link to this heading"></a></h3>
+<p><strong>Problema</strong>: La API de INEGI devolvía errores 401 (Unauthorized) a pesar de usar tokens válidos.</p>
+<p><strong>Solución</strong>: Implementamos un sistema de fallback que intentaba primero obtener datos de Banxico,
+y solo si esta fuente fallaba, recurría a INEGI. En caso de fallos en ambas fuentes, generábamos
+datos sintéticos realistas basados en distribuciones estadísticas históricas.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="c1"># Intentar obtener datos de Banxico</span>
+    <span class="n">datos</span> <span class="o">=</span> <span class="n">obtener_datos_banxico</span><span class="p">()</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># Si Banxico falla, intentar con INEGI</span>
+        <span class="n">datos</span> <span class="o">=</span> <span class="n">obtener_datos_inegi</span><span class="p">()</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e2</span><span class="p">:</span>
+        <span class="c1"># Si ambos fallan, generar datos sintéticos</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Generando datos sintéticos debido a: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2"> y </span><span class="si">{</span><span class="n">e2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">datos</span> <span class="o">=</span> <span class="n">generar_datos_sinteticos</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="datos-inconsistentes">
+<h3>Datos Inconsistentes<a class="headerlink" href="#datos-inconsistentes" title="Link to this heading"></a></h3>
+<p><strong>Problema</strong>: Detectamos valores idénticos para diferentes fechas, lo que indicaba potenciales errores
+en las fuentes de datos o en el proceso de extracción.</p>
+<p><strong>Solución</strong>: Desarrollamos algorítmos de detección de anomalías que identificaban secuencias sospechosamente
+uniformes y las corregían mediante técnicas estadísticas adecuadas.</p>
+</section>
+</section>
+<section id="desafios-en-el-procesamiento-de-datos">
+<h2>Desafíos en el Procesamiento de Datos<a class="headerlink" href="#desafios-en-el-procesamiento-de-datos" title="Link to this heading"></a></h2>
+<section id="valores-atipicos-outliers">
+<h3>Valores Atípicos (Outliers)<a class="headerlink" href="#valores-atipicos-outliers" title="Link to this heading"></a></h3>
+<p><strong>Problema</strong>: Encontramos outliers extremos en los datos que distorsionaban significativamente los análisis.</p>
+<p><strong>Solución</strong>: Implementamos técnicas basadas en el rango intercuartílico (IQR) para detectar y tratar
+estos valores, manteniendo la integridad de los datos mientras eliminábamos distorsiones extremas.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">detectar_outliers_iqr</span><span class="p">(</span><span class="n">serie</span><span class="p">,</span> <span class="n">factor</span><span class="o">=</span><span class="mf">1.5</span><span class="p">):</span>
+    <span class="n">Q1</span> <span class="o">=</span> <span class="n">serie</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.25</span><span class="p">)</span>
+    <span class="n">Q3</span> <span class="o">=</span> <span class="n">serie</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.75</span><span class="p">)</span>
+    <span class="n">IQR</span> <span class="o">=</span> <span class="n">Q3</span> <span class="o">-</span> <span class="n">Q1</span>
+    <span class="n">limite_inferior</span> <span class="o">=</span> <span class="n">Q1</span> <span class="o">-</span> <span class="n">factor</span> <span class="o">*</span> <span class="n">IQR</span>
+    <span class="n">limite_superior</span> <span class="o">=</span> <span class="n">Q3</span> <span class="o">+</span> <span class="n">factor</span> <span class="o">*</span> <span class="n">IQR</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">serie</span> <span class="o">&lt;</span> <span class="n">limite_inferior</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">serie</span> <span class="o">&gt;</span> <span class="n">limite_superior</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="alineacion-temporal">
+<h3>Alineación Temporal<a class="headerlink" href="#alineacion-temporal" title="Link to this heading"></a></h3>
+<p><strong>Problema</strong>: Las fechas de registro para los diferentes indicadores no siempre coincidían, lo que complicaba
+el análisis de correlaciones.</p>
+<p><strong>Solución</strong>: Desarrollamos funciones de alineación temporal que aseguraban que solo se compararan datos
+correspondientes al mismo período, utilizando técnicas de interpolación cuando era necesario.</p>
+</section>
+</section>
+<section id="problemas-en-el-analisis-estadistico">
+<h2>Problemas en el Análisis Estadístico<a class="headerlink" href="#problemas-en-el-analisis-estadistico" title="Link to this heading"></a></h2>
+<section id="correlaciones-espurias">
+<h3>Correlaciones Espurias<a class="headerlink" href="#correlaciones-espurias" title="Link to this heading"></a></h3>
+<p><strong>Problema</strong>: Algunas correlaciones iniciales parecían significativas pero sin fundamento económico real,
+sugiriendo relaciones espurias.</p>
+<p><strong>Solución</strong>: Implementamos análisis de correlación con retardos temporales y pruebas de causalidad de Granger
+para distinguir entre correlaciones casuales y potencialmente causales.</p>
+</section>
+<section id="ajuste-de-modelos">
+<h3>Ajuste de Modelos<a class="headerlink" href="#ajuste-de-modelos" title="Link to this heading"></a></h3>
+<p><strong>Problema</strong>: Los modelos de regresión lineal simple no capturaban adecuadamente las relaciones entre variables.</p>
+<p><strong>Solución</strong>: Desarrollamos un sistema que probaba automáticamente diferentes grados de polinomios (1 a 5) y
+seleccionaba el óptimo basado en métricas como R² ajustado y criterios de información.</p>
+</section>
+</section>
+<section id="desafios-en-la-visualizacion">
+<h2>Desafíos en la Visualización<a class="headerlink" href="#desafios-en-la-visualizacion" title="Link to this heading"></a></h2>
+<section id="rendimiento-de-streamlit">
+<h3>Rendimiento de Streamlit<a class="headerlink" href="#rendimiento-de-streamlit" title="Link to this heading"></a></h3>
+<p><strong>Problema</strong>: Las primeras versiones de la aplicación Streamlit experimentaban lentitud al cargar grandes
+conjuntos de datos y visualizaciones complejas.</p>
+<p><strong>Solución</strong>: Implementamos estrategias de caching para los datos y cálculos intensivos, y optimizamos
+las consultas para mejorar significativamente el rendimiento.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@st</span><span class="o">.</span><span class="n">cache_data</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">cargar_datos</span><span class="p">():</span>
+    <span class="c1"># Esta función solo se ejecuta una vez y luego cachea el resultado</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;indicadores_economicos_clean_v2.csv&#39;</span><span class="p">)</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">df</span>
+</pre></div>
+</div>
+</section>
+<section id="errores-de-conversion-de-datos">
+<h3>Errores de Conversión de Datos<a class="headerlink" href="#errores-de-conversion-de-datos" title="Link to this heading"></a></h3>
+<p><strong>Problema</strong>: Al ejecutar la aplicación Streamlit final, encontrábamos errores de conversión entre
+pandas DataFrame y formato Arrow, necesario para la visualización.</p>
+<p><strong>Solución</strong>: Revisamos y corregimos los tipos de datos en los DataFrames, asegurándonos de que
+fueran compatibles con Arrow y ajustando el código para manejar correctamente fechas y valores numéricos.</p>
+</section>
+</section>
+<section id="lecciones-aprendidas">
+<h2>Lecciones Aprendidas<a class="headerlink" href="#lecciones-aprendidas" title="Link to this heading"></a></h2>
+<p>Este proceso de resolución de problemas nos permitió:</p>
+<ol class="arabic simple">
+<li><p><strong>Mejorar la robustez</strong> de nuestra arquitectura ETL/ELT mediante sistemas de fallback y manejo de errores</p></li>
+<li><p><strong>Refinar nuestros análisis estadísticos</strong> con técnicas más avanzadas y apropiadas para series temporales</p></li>
+<li><p><strong>Optimizar el rendimiento</strong> de nuestras aplicaciones de visualización</p></li>
+<li><p><strong>Implementar buenas prácticas</strong> de documentación y gestión de código</p></li>
+</ol>
+<p>Cada desafío superado contribuyó a un producto final más confiable, preciso y eficiente.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
+        <a href="desarrollo.html" class="btn btn-neutral float-left" title="Proceso de Desarrollo" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2025, David Escudero - Instituto Tecnológico Autónomo de México (ITAM).</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
